@@ -22,3 +22,14 @@ The circuit is constructed by using the well-known Grover's Algorithm. The algor
 3. We use a constructed diffusion operator to amplify the correct states determined from the oracle.
 4. We repeat Steps 2 and 3 sufficiently many times and measure the result.
 From Grover's Algorithm, there is a high probability that we measure the correct state. One of the main difficulties of implementing Grover's Algorithm comes from the construction of the oracle. In order to resolve this, we include 2 ancilla qubits in the register where one ancilla marks whether a state is in the correct set and the other marks whether a state has the correct sum. 
+
+Running the circuit outputs the following:
+```
+find_prime_numbers(6, [2,3])
+The number 6 can be decomposed as 3+3.
+```
+From the plot, we can see that the state 1111 is amplified. 
+<p align="center">
+<img src="Histogram_Plot.png" width="600"/>
+  
+The first two bits 11 come from the first register and the second two bits 11 come from the second register. When converted, the result is the decomposition of 6 into 3+3.
