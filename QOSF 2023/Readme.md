@@ -22,7 +22,9 @@ The circuit is constructed by using the well-known Grover's Algorithm. The algor
 3. We use a constructed diffusion operator to amplify the correct states determined from the oracle.
 4. We repeat Steps 2 and 3 sufficiently many times and measure the result.
    
-From Grover's Algorithm, there is a high probability that we measure the correct state. One of the main difficulties in implementing Grover's Algorithm comes from the construction of the oracle. In order to resolve this, we include 2 ancilla qubits in the register where one ancilla marks whether a state is in the correct set and the other marks whether a state has the correct sum. 
+From Grover's Algorithm, there is a high probability that we measure the correct state. 
+
+One of the main difficulties in implementing Grover's Algorithm comes from the construction of the oracle. In order to resolve this, we include 2 ancilla qubits in the register where one ancilla marks whether a state is in the correct set and the other marks whether a state has the correct sum. In total, we use 2n+3 qubits where n is the number of bits required to represent the largest positive integer in the list. On the first register, we have n qubits, on the second register, we have n+1 qubits, necessary for the sum, and the last two qubits are the ancillas. 
 
 Running the circuit outputs the following:
 ```
