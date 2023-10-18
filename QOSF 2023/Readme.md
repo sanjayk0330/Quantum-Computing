@@ -32,4 +32,13 @@ From the plot, we can see that the state 1111 is amplified.
 <p align="center">
 <img src="Histogram_Plot.png" width="600"/>
   
-The first two bits 11 come from the first register and the second two bits 11 come from the second register. When converted, the result is the decomposition of 6 into 3+3.
+The first two bits 11 come from the first register and the second two bits 11 come from the second register. When converted, the result is the decomposition of 6 into 3+3. Additionally, we can see what happens when there is no solution state. For example, 
+```
+find_prime_numbers(4, [3])
+The quantum algorithm could not decompose 4 as a sum of two elements in [3].
+```
+We can see the reasoning in the following plot:
+<p align="center">
+<img src="Histogram_Plot_No_Answer.png" width="600"/>
+
+Since there are no solution states, none of the amplitudes are amplified when applying Grover's Algorithm.
