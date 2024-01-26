@@ -17,7 +17,7 @@ Example_3 = find_primes_numbers (10,[2,3,4,6])
 10=4+6
 ```
 The circuit is constructed by using the well-known Grover's Algorithm. The algorithm consists of multiple parts:
-1. We apply Hadamard gates to the all 0 states which creates a state of equal superpositions.
+1. We apply Hadamard gates to the all 0 state which creates a state of equal superpositions.
 2. We use a constructed oracle to mark the solution states.
 3. We use a constructed diffusion operator to amplify the correct states determined from the oracle.
 4. We repeat Steps 2 and 3 sufficiently many times and measure the result.
@@ -35,7 +35,7 @@ From the plot, we can see that the state 1111 is amplified.
 <p align="center">
 <img src="Histogram_Plot.png" width="600"/>
   
-The first two bits 11 come from the first register and the second two bits 11 come from the second register. When converted, the result is the decomposition of 6 into 3+3. Additionally, we can see what happens when there is no solution state. For example, 
+The first two bits 11 come from the first register and the second two bits 11 come from the second register. When converted, the result is the decomposition of 6 into 3+3. Additionally, we can see what happens when there is no solution state. For example,  
 ```
 find_prime_numbers(4, [3])
 The quantum algorithm could not decompose 4 as a sum of two elements in [3].
