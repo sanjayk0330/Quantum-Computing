@@ -36,7 +36,7 @@ The subset [] are the elements in [1, 2, 4, 5] that are less than 6.
 ```
 In this case, the number of solution states is equal to N/2 which is creating the error. We can see the reasoning in the following plot:
 <p align="center">
-<img src="Histogram_Plot_Equal_States.png" width="600"/>
+<img src="Histogram_Plot_Equal.png" width="600"/>
 
 Since the number of solution states is equal to the number of incorrect states, neither of their amplitudes are amplified. We could also have more than N/2 solution states. For example,
 ```
