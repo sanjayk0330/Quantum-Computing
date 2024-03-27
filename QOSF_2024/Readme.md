@@ -44,4 +44,6 @@ less_than_k(7,[1,2,3,4,5,6])
 The subset [] are the elements in [1, 2, 3, 4, 5, 6] that are less than 7.
 ```
 
-In general, we can assume there are more solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
+ADD AUGMENTATIONS AND THEIR GRAPHS
+
+In general, we can assume that there are more solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
