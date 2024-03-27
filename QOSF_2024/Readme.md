@@ -25,17 +25,17 @@ Running the circuit outputs the following:
 less_than_k(7,[4,9,11,14,1,13,6,15])
 The subset [6, 1, 4] are the elements in [4, 9, 11, 14, 1, 13, 6, 15] that are less than 7.
 ```
-From the plot, we can see that the state 1111 is amplified. 
+From the plot, we can see that the state 0110, 0001, 0100 is amplified. 
 <p align="center">
 <img src="Histogram_Plot.png" width="600"/>
   
-The first two bits 11 come from the first register and the second two bits 11 come from the second register. When converted, the result is the decomposition of 6 into 3+3. Additionally, we can see what happens when there is no solution state. For example,  
+When converted, the result is that 6, 1, and 4 are the integers in the list less than 7. Additionally, we note that the circuit creates errors for when there are greater than or equal to N/2 solution states. For example,
 ```
-find_prime_numbers(4, [3])
-The quantum algorithm could not decompose 4 as a sum of two elements in [3].
+less_than_k(7,[1,2,3,4,5,6])
+The subset [] are the elements in [1, 2, 3, 4, 5, 6] that are less than 7.
 ```
-We can see the reasoning in the following plot:
+In this case, the number of solution states is equal to N/2 which is creating the error. We can see the reasoning in the following plot:
 <p align="center">
-<img src="Histogram_Plot_No_Answer.png" width="600"/>
+<img src="Histogram_Plot_Equal.png" width="600"/>
 
-Since there are no solution states, none of the amplitudes are amplified when applying Grover's Algorithm.
+In general, we can assume there are more solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
