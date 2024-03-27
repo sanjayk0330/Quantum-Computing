@@ -47,13 +47,22 @@ Since there are more solution states than incorrect states, the incorrect states
 <p align="center">
 <img src="Histogram_Plot_Larger.png" width="600"/>
    
-In order to resolve this, we allow for augmentations of the circuit by including two additional qubits. Although this increases the number of qubits, this guarantees that the number of solution states are less than the number of incorrect states. We see the following:
+In order to resolve this, we allow for augmentations of the circuit by including two additional qubits. Although this increases the number of qubits, this guarantees that the number of solution states are less than the number of incorrect states. We can revisit the previous cases using the augmented circuits. We have
 ```
 less_than_k(6,[1,2,4,5],augment=True)
 The subset [1, 2, 5, 4] are the elements in [1, 2, 4, 5] that are less than 6.
+```
+with the following plot:
+<p align="center">
+<img src="Histogram_Plot_Equal_Augment.png" width="600"/>
 
+We also have    
+```
 less_than_k(7,[1,2,3,4,5,6],augment=True)
 The subset [3, 6, 4, 1, 5, 2] are the elements in [1, 2, 3, 4, 5, 6] that are less than 7.
 ```
+with the following plot:
+<p align="center">
+<img src="Histogram_Plot_Larger_Augment.png" width="600"/>
 
 In most cases, we can assume that there are more solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
