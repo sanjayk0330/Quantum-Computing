@@ -43,6 +43,9 @@ Since the number of solution states is equal to the number of incorrect states, 
 less_than_k(7,[1,2,3,4,5,6])
 The subset [] are the elements in [1, 2, 3, 4, 5, 6] that are less than 7.
 ```
+Since there are more solution states than incorrect states, the incorrect states are amplified by the diffusion operator. This can be seen in the following plot: 
+<p align="center">
+<img src="Histogram_Plot_Larger.png" width="600"/>
 
 ADD AUGMENTATIONS AND THEIR GRAPHS
 
