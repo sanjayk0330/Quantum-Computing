@@ -18,7 +18,7 @@ The circuit is constructed by using the well-known Grover's Algorithm. The algor
    
 From Grover's Algorithm, there is a high probability that we measure the correct state. 
 
-One of the main difficulties in implementing Grover's Algorithm comes from the construction of the oracle. In order to resolve this, we include 1 ancilla qubits in the register where the ancilla marks whether a state is in the correct set. In total, we use 2n+1 qubits where n represents the number of bits required to represent the largest integer between elements of the list and the target number. On the first register and second register, we have n qubits, and the last two qubits are the ancillas. We also remark that the leading qubit in the first and second register indicates the sign of the integer where a 0 is positive and a 1 is negative.
+One of the main difficulties in implementing Grover's Algorithm comes from the construction of the oracle. In order to resolve this, we include 1 ancilla qubit in the register where the ancilla marks whether a state is in the correct set. In total, we use 2n+1 qubits where n represents the number of bits required to represent the largest integer between elements of the list and the target number. On the first register and second register, we have n qubits, and the  qubit is the ancilla. We also remark that the leading qubit in the first and second register indicates the sign of the integer where a 0 is positive and a 1 is negative.
 
 Running the circuit outputs the following:
 ```
