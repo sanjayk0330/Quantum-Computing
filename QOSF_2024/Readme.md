@@ -65,4 +65,4 @@ with the following plot:
 <p align="center">
 <img src="Histogram_Plot_Larger_Augment.png" width="600"/>
 
-In most cases, we can assume that there are more solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
+In most cases, we can assume that there are less solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
