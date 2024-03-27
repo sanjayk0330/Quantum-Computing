@@ -28,14 +28,20 @@ The subset [6, 1, 4] are the elements in [4, 9, 11, 14, 1, 13, 6, 15] that are l
 From the plot, we can see that the state 0110, 0001, 0100 is amplified. 
 <p align="center">
 <img src="Histogram_Plot.png" width="600"/>
-  
+   
 When converted, the result is that 6, 1, and 4 are the integers in the list less than 7. Additionally, we note that the circuit creates errors for when there are greater than or equal to N/2 solution states. For example,
+```
+less_than_k(6,[1,2,4,5])
+The subset [] are the elements in [1, 2, 4, 5] that are less than 6.
+```
+In this case, the number of solution states is equal to N/2 which is creating the error. We can see the reasoning in the following plot:
+<p align="center">
+<img src="Histogram_Plot_Equal_States.png" width="600"/>
+
+Since the number of solution states is equal to the number of incorrect states, neither of their amplitudes are amplified. We could also have more than N/2 solution states. For example,
 ```
 less_than_k(7,[1,2,3,4,5,6])
 The subset [] are the elements in [1, 2, 3, 4, 5, 6] that are less than 7.
 ```
-In this case, the number of solution states is equal to N/2 which is creating the error. We can see the reasoning in the following plot:
-<p align="center">
-<img src="Histogram_Plot_Equal.png" width="600"/>
 
 In general, we can assume there are more solution states than incorrect states; however, we can always resolve the issue by augmenting the circuit to 2n+3 qubits. 
